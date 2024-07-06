@@ -1,0 +1,24 @@
+.MainBox{
+    width: 100%;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buttonContainer> button{
+    padding: 3px 15px;
+    border: none;
+    background: green;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.buttonContainer> button:nth-child(3){
+    background: red;
+}
+
+.buttonContainer> button:hover{
+    background: rgb(181, 33, 33);
+}
