@@ -1,23 +1,21 @@
-import { useEffect } from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
 import Main from './components/Main';
-import { useTelegram } from './hooks/TelegramWebApp'
+import { useTelegram } from './hooks/TelegramWebApp';
 
-function App() {
-  const {bot} = useTelegram();
+
+const App = () => {
+  const { bot } = useTelegram();
 
   useEffect(() => {
     bot.ready()
-  },[bot])
+  }, [bot])
 
 
-
-  
   return (
     <div className="Mobile">
-      <Main/>
+      <Main />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

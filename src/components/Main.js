@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useTelegram } from '../hooks/TelegramWebApp';
 import './Main.css'
-import { useTelegram } from '../hooks/TelegramWebApp'
 
 const Main = () => {
-    const {onClose,increment,decrement,bot} = useTelegram();
-    const [count, setCount] = useState()
-  return (
-    <div className='MainBox'>
-        <h1>Count: {count}</h1>
-        <div className='buttonContainer'>
-            <button onClick={()=> decrement(count, setCount)}>Minus</button>
-            <button onClick={()=> increment(count, setCount)}>Pilus</button>
-            <button onClick={onClose}>Orqaqga</button>
+    const { onClose, increment, decrement } = useTelegram();
+    const [count, setCount] = useState(0);
+
+    return (
+        <div className='MainBox'>
+            <h1>Count: {count}</h1>
+            <div className="buttonContainer">
+                <button onClick={() => decrement(count, setCount)}>Minus</button>
+                <button onClick={() => increment(count, setCount)}>Plus</button>
+                <button onClick={onClose}>Orqaga</button>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Main
