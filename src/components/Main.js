@@ -21,7 +21,7 @@ const Main = () => {
                         <div>
                             <h2>Nuriddin (CEO)</h2>
                             <div className="level">
-                                <span>Grandmaster</span>
+                                {/* <span>Grandmaster</span> */}
                                 
                             </div>
                         </div>
