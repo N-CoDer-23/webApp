@@ -22,7 +22,7 @@ const Main = () => {
                             <h2>Nuriddin (CEO)</h2>
                             <div className="level">
                                 <span>Grandmaster</span>
-                                <span>9 / 11</span>
+                                
                             </div>
                         </div>
                         <button className='x' onClick={onClose}>X</button>
@@ -51,7 +51,7 @@ const Main = () => {
                     <img src={hamsterImage} alt="Hamster" onClick={() => increment(count, setCount)}/>
                 </div>
                 <div className="button-container">
-                    <button onClick={() => decrement(count, setCount)}>Minus</button>
+                    {/* <button onClick={() => decrement(count, setCount)}>Minus</button> */}
                     
                     
                 </div>
