@@ -1,3 +1,4 @@
+// components/Main.js
 import React, { useState, useEffect } from 'react';
 import { useTelegram } from '../hooks/TelegramWebApp';
 import './Main.css';
@@ -16,9 +17,7 @@ const Main = () => {
 
     const handleTouch = (e) => {
         const numTouches = e.touches.length;
-        if (numTouches === 3) {
-            increment(count, setCount, numTouches);
-        }
+        increment(count, setCount, numTouches);
     };
 
     return (
