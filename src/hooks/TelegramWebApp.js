@@ -1,26 +1,28 @@
-const bot = window.Telegram.WebApp;
+export const useTelegram = () => {
+    const increment = (count, setCount, numTouches) => {
+        const newCount = count + numTouches;
+        setCount(newCount);
+        localStorage.setItem('count', newCount);
+    };
 
-export function useTelegram() {
+    const decrement = (count, setCount) => {
+        const newCount = count - 1;
+        setCount(newCount);
+        localStorage.setItem('count', newCount);
+    };
+
     const onClose = () => {
-        bot.close();
-    };
-
-    const increment = (value, setValue) => {
-        setValue(value + 1)
-    };
-    const decrement = (value, setValue) => {
-        if (value > 0) {
-            setValue(value - 1)
+        if (window.Telegram && window.Telegram.WebApp) {
+            window.Telegram.WebApp.close();
         }
     };
+
+    const bot = window.Telegram ? window.Telegram.WebApp : null;
+
     return {
-        onClose,
         increment,
         decrement,
-        bot
-    }
-
-}
-
-
-
+        onClose,
+        bot,
+    };
+};
