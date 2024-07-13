@@ -1,11 +1,10 @@
-// components/Main.js
 import React, { useState, useEffect } from 'react';
 import { useTelegram } from '../hooks/TelegramWebApp';
 import './Main.css';
 import hamsterImage from '../assets/lion.jpg'; // Hamster image URL
 
 const Main = () => {
-    const { onClose, increment, decrement } = useTelegram();
+    const { onClose, increment } = useTelegram(); // decrement ni hozircha ishlatmaymiz
     const [count, setCount] = useState(0);
 
     useEffect(() => {
